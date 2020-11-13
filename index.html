@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+        <meta charset="UTF-8">
+
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+		<script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+		<script language="javascript" type="text/javascript" src="libraries/p5.dom.js"></script>
+		<script language="javascript" type="text/javascript" src="libraries/aframe.min.js"></script>
+        <script language="javascript" type="text/javascript" src="libraries/aframep5.js"></script>
+        <script language="javascript" type="text/javascript" src="sketch.js"></script>
+        <script src="Flake.js"></script>
+    
+        <style>
+			body {
+				padding: 0;
+				margin: 0;
+			}
+        </style>
+
+    </head>
+    <body>
+        <a-scene id="VRScene">
+            <a-assets id="VRAssets">
+                <img id="ground" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+                <img id="sky" src="https://cdn.aframe.io/a-painter/images/sky.jpg">
+
+                <!--<a-asset-item id="crate-obj" src="crate.obj"></a-asset-item> // fpr importig .obj file -->
+
+            </a-assets>
+        <a-box color="red" position="0 0 2" rotation="0 45 45" scale="200 200 200"></a-box>
+
+            <a-cylinder id="theGround" src="#ground" radius="30" height="0.1"></a-cylinder>
+      
+            <a-sky id="theSky" src="#skyTexture" theta-length="90" radius="30"></a-sky>
+        </a-scene>
+   </body>
+</html>
